@@ -10,14 +10,15 @@ A TMDB Based OTT Platform
 
 ## Setup Guide
 
-1. Install the Dependencies
+1. Clone the Repo
+2. Install the Dependencies
     ```bash
     bun install 
     ```
 
-2. Rename .example.env to .env & replace YOUR_TMDB_API_KEY to your actual TMDB api key
+3. Rename .example.env to .env & replace YOUR_TMDB_API_KEY to your actual TMDB api key
 
-3. Run the Application
+4. Run the Application
     ```bash
     bun run dev
     ```
