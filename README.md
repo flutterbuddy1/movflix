@@ -1,12 +1,23 @@
-# React + Vite
+# MovFlix
+A TMDB Based OTT Platform
+<br>
+<a href="https://mindmovie.netlify.app">Live Demo</a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div>
+<img src="./screenshots/1.png" height="300">
+<img src="./screenshots/2.png" height="300">
+</div>
 
-Currently, two official plugins are available:
+## Setup Guide
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install the Dependencies
+    ```bash
+    bun install 
+    ```
 
-## Expanding the ESLint configuration
+2. Rename .example.env to .env & replace YOUR_TMDB_API_KEY to your actual TMDB api key
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Run the Application
+    ```bash
+    bun run dev
+    ```
