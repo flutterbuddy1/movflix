@@ -5,20 +5,22 @@ import styled from 'styled-components';
 const NetflixCard = ({ id, type, image, title, rating , data, page}) => {
     const navigate = useNavigate();
     return (
-        <Card className='col-3' onClick={() => type == "tv" ? navigate(`/show/${id}`) : page == "movie" ? navigate(`/movie/${id}`) : navigate(`/show/${id}`)}>
+        <div className='col-6 col-sm-6 col-md-3 col-lg-2 mb-4'>
+            <Card onClick={() => type == "tv" ? navigate(`/show/${id}`) : page == "movie" ? navigate(`/movie/${id}`) : navigate(`/show/${id}`)}>
             <Poster src={image} alt={title} />
             <CardOverlay>
                 <Title>{title}</Title>
                 {rating && <Rating>⭐ {rating}</Rating>}
             </CardOverlay>
         </Card>
+        </div>
     );
 };
 
 export default NetflixCard;
 const Card = styled.div`
   position: relative;
-  width: 200px;
+  width: 100%;
   height: 300px;
   border-radius: 6px;
   overflow: hidden;
@@ -32,8 +34,8 @@ const Card = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 140px;
-    height: 210px;
+    width: 100%;
+    height: 300px;
   }
 `;
 

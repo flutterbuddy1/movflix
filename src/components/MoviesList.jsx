@@ -10,7 +10,7 @@ function MoviesList({ list , page="movie"}) {
     </div>);
     return (
         <div className='container'>
-        <div className='row gap-3 mx-auto'>
+        <div className='row'>
             {list.map((movie) => (<NetflixCard
                 id={movie.id}
                 key={movie.id}
