@@ -51,6 +51,16 @@ export class TMDbService {
     return res.data;
   }
 
+  async getMovieVideo(movieId) {
+    const res = await this.api.get(`/movie/${movieId}/videos`);
+    return res.data;
+  }
+
+  async getTvVideos(seriedId) {
+    const res = await this.api.get(`/tv/${seriedId}/videos`);
+    return res.data;
+  }
+
   async getTVDetails(tvId) {
     const res = await this.api.get(`/tv/${tvId}`);
     return res.data;

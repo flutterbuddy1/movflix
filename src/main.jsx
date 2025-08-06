@@ -11,6 +11,8 @@ import Movies from './pages/Movies';
 import Search from './pages/Search';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
+import Player from './pages/Player';
+import TvPlayer from './pages/TvPlayer';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +26,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/search/:query' element={<Search />} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/player/:id' element={<Player />} />
+        <Route path='/tv-player/:id' element={<TvPlayer />} />
         <Route path='*' element={<h1>Page not found</h1>} />
       </Routes>
     </BrowserRouter>

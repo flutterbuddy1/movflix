@@ -13,9 +13,6 @@ export default function Home() {
   const [coverMovie, setCoverMovie] = useState({});
   const [loading, setLoading] = useState(false);
   const tmdbService = new TMDbService();
-  useEffect(() => {
-    fetchMovies();
-  }, [])
 
   const fetchMovies = async () => {
     setLoading(true);
@@ -29,12 +26,17 @@ export default function Home() {
 
     setLoading(false);
   }
+  useEffect(() => {
+    // if (topMovies.length == 0 && movies.length == 0) {
+    fetchMovies();
+    // }
+  }, [])
 
   return loading ? (
     <MainLayout>
       <Loader loading={loading} />
     </MainLayout>
-  ):(
+  ) : (
     <MainLayout>
       <Hero
         backgroundImage={tmdbService.getImageUrl(coverMovie.poster_path, 'original')}
@@ -48,7 +50,7 @@ export default function Home() {
 
       <TitleComponent title={"Popular"} />
       <MoviesList list={movies} />
-      <div className='mb-5'/>
+      <div className='mb-5' />
     </MainLayout>
   )
 }
