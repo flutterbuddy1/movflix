@@ -1,7 +1,7 @@
 # MovFlix
 A TMDB Based OTT Platform
 <br>
-<a href="https://mindmovie.netlify.app">Live Demo</a>
+<a href="https://mayankflix.netlify.app/">Live Demo</a>
 
 <div>
 <img src="./screenshots/1.png" height="300">
